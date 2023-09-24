@@ -17,21 +17,15 @@ M.dap = {
   }
 }
 
-M.undo = {
-  n = {
-    ["<A-u>"] = {
-      "<cmd>UndotreeToggle<cr>",
-    },
-  },
-}
-
 M.vimtex = {
   n = {
     ["<leader>ll"] = {
       "<cmd>VimtexCompile<cr>",
+      "Compile the LaTeX document",
     },
     ["<leader>lt"] = {
       "<cmd>VimtexTocToggle<cr>",
+      "Toggle table of contense"
     },
     ["<leader>li"] = {
       "<cmd>Vimtex<cr>",
@@ -49,7 +43,20 @@ M.rust = {
   n = {
     ["<leader>rr"] = {
       "<cmd>RustRun<cr>",
+      "Run the Rust compiler",
+      ,
     },
   },
 }
+
+
+M.undo = {
+  n = {
+    ["<A-u>"] = {
+      "<cmd>UndotreeToggle<cr>",
+      "Toggle Undotree"
+    },
+  },
+}
+
 return M

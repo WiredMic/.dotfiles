@@ -38,9 +38,6 @@ local plugins = {
     opts = function ()
       return require "custom.configs.vimtex"
     end,
-    config = function (_, opts)
-      require('vimtex').setup(opts)
-    end
   },
   {
     "neoclide/coc.nvim",

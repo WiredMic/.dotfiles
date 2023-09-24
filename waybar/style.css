@@ -160,10 +160,11 @@ window#waybar.empty #window {
     padding: 2px 10px 0px 10px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
+    border: 3px solid @background;
 }
 
 #custom-updates.green {
-    background-color: @background;
+    background-color: @color11;
     color: #ffffff;
 }
 
@@ -213,7 +214,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-    background-color: @background;
+    background-color: @color11;
     font-size: 16px;
     color: #ffffff;
     border-radius: 12px;
@@ -234,7 +235,7 @@ window#waybar.empty #window {
 #network {
     background-color: #FFFFFF;
     font-size: 16px;
-    color: @background;
+    color: @color11;
     border-radius: 14px;
     padding: 2px 10px 0px 10px;
     margin: 3px 15px 3px 0px;
@@ -244,7 +245,7 @@ window#waybar.empty #window {
 
 #network.ethernet {
     /* background-color: @color11; */
-    background-color: @background;
+    background-color: @color11;
     color:#FFFFFF;
 }
 
@@ -258,16 +259,17 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #bluetooth.on, #bluetooth.connected {
-    background-color: @background;
+    background-color: @color11;
     font-size: 16px;
     color: #ffffff;
     border-radius: 12px;
     padding: 2px 10px 0px 10px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
+    border: 3px solid @background; 
 }
 
-#bluetooth.off {
+#bluetooth.off { 
     background-color: transparent;
     padding: 0px;
     margin: 0px;
