@@ -1,0 +1,10 @@
+[user]
+	email = rasmus@enev.dk
+	name = WiredMic
+[difftool "gitklientdiff"]
+	cmd = gitklientdiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "gitklientmerge"]
+	cmd = gitklientmerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[init]
+	defaultBranch = main

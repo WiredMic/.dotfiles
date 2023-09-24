@@ -4,9 +4,9 @@ A repo for all my dotfiles and install scripts.
 # How to use
 
 ## SSH
-[githubs SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[GitHubs SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-First we need to setup ssh and connect it with github. This is done because this repo is private.
+First we need to setup ssh and connect it with GitHub. This is done because this repo is private.
 
 `ssh-keygen -t ed25519 -C "your_email@example.com"`
 
