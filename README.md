@@ -31,7 +31,7 @@ First make the dotfiles directory.
 
 Then clone the repo into the dir
 
-`git clone git@github.com:WiredMic/.dotfiles.git ~/.dotfiles/.`
+`git clone --recurse-submodules git@github.com:WiredMic/.dotfiles.git ~/.dotfiles/.`
 
 ## Run the init script
 
