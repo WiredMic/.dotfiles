@@ -1,0 +1,15 @@
+[submodule "plugins/auto-notify"]
+	path = plugins/auto-notify
+	url = https://github.com/MichaelAquilina/zsh-auto-notify
+[submodule "plugins/zsh-autosuggestions"]
+	path = plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "plugins/zsh-you-should-use"]
+	path = plugins/zsh-you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use
+[submodule "plugins/zsh-syntax-highlighting/plugins/auto-notify"]
+	path = plugins/zsh-syntax-highlighting/plugins/auto-notify
+	url = https://github.com/MichaelAquilina/zsh-auto-notify
+[submodule "themes/powerlevel10k"]
+	path = themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
