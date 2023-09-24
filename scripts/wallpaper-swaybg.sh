@@ -12,7 +12,7 @@
 # ----------------------------------------------------- 
 # Select wallpaper
 # ----------------------------------------------------- 
-selected=$(ls -1 $XDG_DATA_HOME/wallpapers | grep "jpg" | wofi --dmenu -p "Wallpapers")
+selected=$(ls -1 $XDG_DATA_HOME/wallpapers | grep -i "jpg\|png" | wofi --dmenu -p "Wallpapers")
 
 if [ "$selected" ]; then
   echo "Changing theme..."

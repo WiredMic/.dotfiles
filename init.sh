@@ -71,8 +71,13 @@ ln -s ~/.dotfiles/neovim_chad_custom/.* ~/.config/nvim/lua/custom/
 
 # download pywal
 
+mkdir ~/.config/wal/
+
 ln -s ~/.dotfiles/wal/templates/* ~/.config/wal/
 
+mkdir ~/.local/share/wallpapers/
+
+ln -s ~/.dotfiles/wallpapers/* ~/.local/share/wallpapers/
 
 # ---------------------------
 # waybar
@@ -80,4 +85,13 @@ ln -s ~/.dotfiles/wal/templates/* ~/.config/wal/
 
 mkdir ~/.config/waybar
 
-ln -s ~/.dotfiles/waybar/* ~/.config/waybar/ 
+ln -s ~/.dotfiles/waybar/* ~/.config/waybar/
+
+
+# ---------------------------
+# kitty
+# ---------------------------
+
+mkdir ~/.config/kitty
+
+ln -s ~/.dotfiles/kitty/* ~/.config/kitty/
