@@ -14,5 +14,6 @@ stow --target=/home/wiredmic hypr
 stow --target=/home/wiredmic kitty
 stow --target=/home/wiredmic wal 
 stow --target=/home/wiredmic waybar
+stow --target=/home/wiredmic cows
 stow --target=/home/wiredmic zsh
 
