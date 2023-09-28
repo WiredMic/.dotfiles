@@ -35,9 +35,11 @@ else
 	sudo pacman -S --needed base-devel
   if [[ sudo pacman -Qs rustup > /dev/null ]]; then
     rustup install stable
+    rustup default stable
   else
     sudo pacman -S rustup
     rustup install stable
+    rustup default stable
   fi
 	git clone https://aur.archlinux.org/paru.git ~/paru-git
 	cd ~/paru-git
