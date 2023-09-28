@@ -13,7 +13,7 @@ stow --target=/home/$(whoami)/.config/git git
 
 
 mkdir -p ~/.config/nvim/
-git clone https://github.com/NvChad/NvChad.git ~/config/nvim/.
+git clone https://github.com/NvChad/NvChad.git ~/.config/nvim/
 mkdir -p ~/.config/nvim/lua/custom/
 stow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
 
