@@ -30,9 +30,12 @@ mkdir -p ~/.config/waybar
 stow --target=/home/$(whoami)/.config/waybar waybar
 
 mkdir -p ~/.local/share/cows
-stow --target=/home/$(whoami)/.config/cows cowsay
+stow --target=/home/$(whoami)/.local/share/cows cowsay
+
+stow --target=/home/$(whoami) zsh_initfile
 
 mkdir -p ~/.config/zsh
 stow --target=/home/$(whoami)/.config/zsh zsh
+echo "Type password to change shell to ZSH"
 chsh -s $(which zsh)
 
