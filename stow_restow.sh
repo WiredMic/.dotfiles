@@ -8,10 +8,12 @@
 # by Rasmus Enevoldsen (2023)
 # -------------------------------------
 
-stow --verbose --target=/home/wiredmic --restow git
-stow --verbose --target=/home/wiredmic neovim_chad_custom
-stow  --verbose --target=/home/wiredmic --restow hypr
-stow --verbose --target=/home/wiredmic --restow kitty
-stow --verbose --target=/home/wiredmic --restow wal 
-stow --verbose --target=/home/wiredmic --restow waybar
-stow --verbose --target=/home/wiredmic --restow zsh
+stow --target=/home/$(whoami)/.config/git git
+stow --verbose --target=/home/$(whoami)/.config/nvim/lua/custom --restow neovim_chad_custom
+stow --verbose --target=/home/$(whoami)/.config/hypr --restow hypr
+stow --verbose --target=/home/$(whoami)/.config/kitty --restow kitty
+stow --verbose --target=/home/$(whoami)/.config/wal --restow wal
+stow --verbose --target=/home/$(whoami)/.config/waybar --restow waybar
+stow --verbose --target=/home/$(whoami)/.local/share/cows --restow cowsay
+stow ---verbose -target=/home/$(whoami) zsh_initfile
+stow ---verbose -target=/home/$(whoami)/.config/zsh --restow zsh
