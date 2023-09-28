@@ -44,8 +44,8 @@ else
 	git clone https://aur.archlinux.org/paru.git ~/paru-git
 	cd ~/paru-git
 	makepkg -si
-	rmdir ~/paru-git
 	cd ~/.dotfiles/
+	rm -rf ~/paru-git
 	clear
 	echo "  ___           _        _ _  "
 	echo " |_ _|_ __  ___| |_ __ _| | | "
