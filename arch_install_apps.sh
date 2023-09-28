@@ -93,6 +93,7 @@ packagesPacman=(
     "libnotify"
     "cowsay"
     "lolcat"
+    "stow"
 );
 
 packagesYay=(
