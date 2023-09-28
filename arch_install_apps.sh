@@ -33,6 +33,12 @@ if sudo pacman -Qs paru > /dev/null ; then
 else 
 	echo "Paru is not installed. Will be installed now!"
 	sudo pacman -S --needed base-devel
+  if [[ sudo pacman -Qs rustup > /dev/null ]]; then
+    rustup install stable
+  else
+    sudo pacman -S rustup
+    rustup install stable
+  fi
 	git clone https://aur.archlinux.org/paru.git ~/paru-git
 	cd ~/paru-git
 	makepkg -si
