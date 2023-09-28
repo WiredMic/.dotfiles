@@ -8,12 +8,31 @@
 # by Rasmus Enevoldsen (2023)
 # -------------------------------------
 
-stow --target=/home/wiredmic git
-# stow --target=/home/wiredmic neovim_chad_custom
-stow --target=/home/wiredmic hypr
-stow --target=/home/wiredmic kitty
-stow --target=/home/wiredmic wal 
-stow --target=/home/wiredmic waybar
-stow --target=/home/wiredmic cows
-stow --target=/home/wiredmic zsh
+mkdir -p ~/.config/git
+stow --target=/home/$(whoami)/.config/git git
+
+
+mkdir -p ~/.config/nvim/
+git clone https://github.com/NvChad/NvChad.git ~/config/nvim/.
+mkdir -p ~/.config/nvim/lua/custom/
+stow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
+
+mkdir -p ~/.config/hypr
+stow --target=/home/$(whoami)/.config/hypr hypr
+
+mkdir -p ~/.config/kitty
+stow --target=/home/$(whoami)/.config/kitty kitty
+
+mkdir -p ~/.config/wal
+stow --target=/home/$(whoami)/.config/wal wal
+
+mkdir -p ~/.config/waybar
+stow --target=/home/$(whoami)/.config/waybar waybar
+
+mkdir -p ~/.local/share/cows
+stow --target=/home/$(whoami)/.config/cows cowsay
+
+mkdir -p ~/.config/zsh
+stow --target=/home/$(whoami)/.config/zsh zsh
+chsh -s $(which zsh)
 
