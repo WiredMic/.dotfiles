@@ -8,12 +8,12 @@
 # by Rasmus Enevoldsen (2023)
 # -------------------------------------
 
-stow --target=/home/$(whoami)/.config/git git
-stow --verbose --target=/home/$(whoami)/.config/nvim/lua/custom --restow neovim_chad_custom
-stow --verbose --target=/home/$(whoami)/.config/hypr --restow hypr
-stow --verbose --target=/home/$(whoami)/.config/kitty --restow kitty
-stow --verbose --target=/home/$(whoami)/.config/wal --restow wal
-stow --verbose --target=/home/$(whoami)/.config/waybar --restow waybar
-stow --verbose --target=/home/$(whoami)/.local/share/cows --restow cowsay
-stow ---verbose -target=/home/$(whoami) zsh_initfile
-stow ---verbose -target=/home/$(whoami)/.config/zsh --restow zsh
+stow --verbose --restow --target=/home/$(whoami)/.config/git git
+stow --verbose --restow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
+stow --verbose --restow --target=/home/$(whoami)/.config/hypr hypr
+stow --verbose --restow --target=/home/$(whoami)/.config/kitty kitty
+stow --verbose --restow --target=/home/$(whoami)/.config/wal wal
+stow --verbose --restow --target=/home/$(whoami)/.config/waybar waybar
+stow --verbose --restow --target=/home/$(whoami)/.local/share/cows cowsay
+stow --verbose --restow --target=/home/$(whoami) zsh_initfile
+stow --verbose --restow --target=/home/$(whoami)/.config/zsh zsh
