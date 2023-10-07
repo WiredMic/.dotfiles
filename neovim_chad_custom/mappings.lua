@@ -17,49 +17,84 @@ M.dap = {
   }
 }
 
-M.vimtex = {
-  n = {
-    ["<leader>ll"] = {
-      "<cmd>VimtexCompile<cr>",
-      "Compile the LaTeX document",
-    },
-    ["<leader>lt"] = {
-      "<cmd>VimtexTocToggle<cr>",
-      "Toggle table of contense"
-    },
-    ["<leader>li"] = {
-      "<cmd>Vimtex<cr>",
-    },
-    -- :VimtexInfo: show all relevant info about current LaTeX project.
-    -- :VimtexTocOpen: show table of contents window
-    -- :VimtexTocToggle: toggle table of contents window
-    -- :VimtexCompile: Compile the current LaTeX source file and opens the viewer after successful compilation.
-    -- :VimtexStop: Stop compilation for the current project.
-    -- :VimtexClean: clean auxiliary files generated in compliation process.
-  }
-}
-
 M.rust = {
   n = {
-    ["<leader>rr"] = {
-      function ()
-        if vim.bo.filetype == "rust" then
-        vim.cmd("RustRun")
-        end
-      end,
+    ["<localleader>rr"] = {
+      -- function ()
+      --   if vim.bo.filetype == "rust" then
+      --   vim.cmd("RustRun")
+      --   end
+      -- end,
+      "<cmd>RustRun<CR>",
       "Run the Rust compiler",
     },
   },
 }
 
+-- M.vimtex = {
+--   n = {
+--     ["<leader>ll"] = {
+--       function ()
+--         if vim.bo.filetype == "tex" then
+--         vim.cmd("VimtexCompile")
+--         end
+--       end,
+--       "Compile the LaTeX document",
+--     },
+--     ["<leader>lt"] = {
+--       function ()
+--         if vim.bo.filetype == "tex" then
+--         vim.cmd("VimtexTocToggle")
+--         end
+--       end,
+--       "Toggle table of contense"
+--     },
+--     ["<leader>li"] = {
+--       function ()
+--         if vim.bo.filetype == "tex" then
+--         vim.cmd("VimtexInfo")
+--         end
+--       end,
+--     },
+--   }
+-- }
 
 M.undo = {
   n = {
     ["<A-u>"] = {
-      "<cmd>UndotreeToggle<cr>",
+      "<cmd>UndotreeToggle<CR>",
       "Toggle Undotree"
     },
   },
 }
+
+M.open = {
+  n = {
+    ["gx"] = {
+      function ()
+        if vim.fn.has("mac") == 1 then
+          vim.cmd([[call jobstart(["open", expand("<cfile>")], {"detach": v:true})]]);
+        elseif vim.fn.has("unix") == 1 then
+          vim.cmd([[execute '!xdg-open ' .. shellescape(expand('<cfile>'), v:true)]]);
+        elseif IsWSL() == 1 then
+          vim.cmd([[execute '!wslview ' .. shellescape(expand('<cfile>'), v:true)]]);
+        else
+          vim.cmd([[lua print("Error: gx is not supported on this OS!")]]);
+        end
+      end,
+      "Open URL under curser"
+    }
+  }
+}
+
+function IsWSL()
+  if vim.fn.has("unix") then
+    local lines = io.open("/proc/version", "r");
+    if (lines[1] ~= nil and lines[1] == "Microsoft") then
+      return 1
+    end
+  end
+  return 0
+end
 
 return M

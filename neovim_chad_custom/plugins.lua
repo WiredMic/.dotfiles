@@ -5,7 +5,7 @@ local plugins = {
       ensure_installed = {
         "rust-analyzer",
         "ltex-ls", -- https://github.com/valentjn/ltex-ls
-        "texlab",
+        -- "texlab",
         "marksman",
       },
     },
