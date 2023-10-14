@@ -73,6 +73,18 @@ local plugins = {
     "mbbill/undotree",
     cmd = {"UndotreeToggle"},
   },
+  {
+    -- https://github.com/iamcco/markdown-preview.nvim
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+    opts = function ()
+      return require "custom.config.markdown-preview"
+    end,
+  },
 }
 
 return plugins
