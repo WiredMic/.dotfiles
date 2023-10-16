@@ -8,42 +8,43 @@
 # by Rasmus Enevoldsen (2023)
 # -------------------------------------
 
-rm -rf ~/.config/git
-mkdir -p ~/.config/git
+rm -rf $HOME/.config/git
+mkdir -p $HOME/.config/git
 stow --target=/home/$(whoami)/.config/git git
 
 
-rm -rf ~/.config/nvim
-mkdir -p ~/.config/nvim/
+rm -rf $HOME/.config/nvim
+mkdir -p $HOME/.config/nvim/
 git clone https://github.com/NvChad/NvChad.git ~/.config/nvim/
-mkdir -p ~/.config/nvim/lua/custom/
+mkdir -p $HOME/.config/nvim/lua/custom/
 stow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
 
-rm -rf ~/.config/hypr
-mkdir -p ~/.config/hypr
+rm -rf $HOME/.config/hypr
+mkdir -p $HOME/.config/hypr
 stow --target=/home/$(whoami)/.config/hypr hypr
 
-rm -rf ~/.config/kitty
-mkdir -p ~/.config/kitty
+rm -rf $HOME/.config/kitty
+mkdir -p $HOME/.config/kitty
 stow --target=/home/$(whoami)/.config/kitty kitty
 
-rm -rf ~/.config/wal
-mkdir -p ~/.config/wal
+rm -rf $HOME/.config/wal
+mkdir -p $HOME/.config/wal
 stow --target=/home/$(whoami)/.config/wal wal
 
-rm -rf ~/.config/waybar
-mkdir -p ~/.config/waybar
+rm -rf $HOME/.config/waybar
+mkdir -p $HOME/.config/waybar
 stow --target=/home/$(whoami)/.config/waybar waybar
 
-rm -rf ~/.local/share/cows
+rm -rf $HOME/.local/share/cows
 mkdir -p ~/.local/share/cows
 stow --target=/home/$(whoami)/.local/share/cows cowsay
 
+rm -rf $HOME/.zshenv 
 stow --target=/home/$(whoami) zsh_initfile
 
-rm -rf ~/.config/zsh
+rm -rf $HOME/.config/zsh
 mkdir -p ~/.config/zsh
 stow --target=/home/$(whoami)/.config/zsh zsh
 echo "Type password to change shell to ZSH"
-chsh -s $(which zsh)
+chsh -s $(/bin/zsh)
 
