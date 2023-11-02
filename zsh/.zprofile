@@ -8,4 +8,4 @@
 # --------------------------------------------------
 
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
-PATH="/home/rasmus/.local/share/cargo/bin:$PATH"
+PATH="/home/$(whoami)/.local/share/cargo/bin:$PATH"

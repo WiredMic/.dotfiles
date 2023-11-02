@@ -38,7 +38,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-export WGETRC="XDG_CONFIG_HOME"/wget/wgetrc
+# export WGETRC="XDG_CONFIG_HOME"/wget/wgetrc
 export OPENAUDIBLE_HOME=~/Documents/OpenAudible
 
 # Distrobox
@@ -46,8 +46,4 @@ export OPENAUDIBLE_HOME=~/Documents/OpenAudible
 export DBX_CONTAINER_MANAGER="podman"
 # export QT_STYLE_OVERRIDE=kvantum
 # export QT_QPA_PLATFORMTHEME=gtk2
-
-
-
-
 

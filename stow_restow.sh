@@ -15,5 +15,6 @@ stow --verbose --restow --target=/home/$(whoami)/.config/kitty kitty
 stow --verbose --restow --target=/home/$(whoami)/.config/wal wal
 stow --verbose --restow --target=/home/$(whoami)/.config/waybar waybar
 stow --verbose --restow --target=/home/$(whoami)/.local/share/cows cowsay
+stow --verbose --restow --target=/home/$(whoami)/.config/distrobox distrobox
 stow --verbose --restow --target=/home/$(whoami) zsh_initfile
 stow --verbose --restow --target=/home/$(whoami)/.config/zsh zsh

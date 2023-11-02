@@ -39,6 +39,10 @@ rm -rf $HOME/.local/share/cows
 mkdir -p ~/.local/share/cows
 stow --target=/home/$(whoami)/.local/share/cows cowsay
 
+rm -rf $HOME/.config/distrobox
+mkdir -p $HOME/.config/distrobox
+stow --target=/home/$(whoami)/.config/distrobox distrobox
+
 rm -rf $HOME/.zshenv 
 stow --target=/home/$(whoami) zsh_initfile
 
