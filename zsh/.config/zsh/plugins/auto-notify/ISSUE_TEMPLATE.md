@@ -1,0 +1,1 @@
+../../../../../zsh/plugins/auto-notify/ISSUE_TEMPLATE.md

@@ -1,0 +1,1 @@
+../../../../../../neovim_chad_custom/ftplugin/rs.lua

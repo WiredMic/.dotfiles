@@ -1,0 +1,1 @@
+../../../../../../zsh/themes/powerlevel10k/internal/configure.zsh
