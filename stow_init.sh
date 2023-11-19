@@ -34,12 +34,12 @@ stow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
 
 # test if neovim is in flatpak 
 if flatpak list | grep "test"; then
-  rm -rf $HOME/.var/app/io.neovim.nvim/config
-  mkdir -p $HOME/.var/app/io.neovim.nvim/config
+  rm -rf $HOME/.var/app/io.neovim.nvim/data/nvim/
+  mkdir -p $HOME/.var/app/io.neovim.nvim/data/nvim/
 
-  cp -r ./NvChad/. $HOME/.var/app/io.neovim.nvim/config/
-  mkdir -p $HOME/.var/app/io.neovim.nvim/config/lua/custom/
-  stow --target=/home/$(whoami)/.var/app/io.neovim.nvim/config/lua/custom neovim_chad_custom
+  cp -r ./NvChad/. $HOME/.var/app/io.neovim.nvim/data/nvim/
+  mkdir -p $HOME/.var/app/io.neovim.nvim/config/lua/data/nvim/
+  stow --target=/home/$(whoami)/.var/app/io.neovim.nvim/config/lua/data/nvim/ neovim_chad_custom
 fi
 
 rm -rf $HOME/.config/hypr
