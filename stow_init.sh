@@ -13,11 +13,34 @@ mkdir -p $HOME/.config/git
 stow --target=/home/$(whoami)/.config/git git
 
 
+# test internet and get newest version of NvChad
+wget -q --spider https://google.com
+
+if [ $? -eq 0 ]; then   
+  echo "online"
+  rm -rf ./NvChad
+  mkdir ./NvChad
+  git clone https://github.com/NvChad/NvChad.git ./NvChad/
+  rm -rf ./NvChad/.git ./NvChad/.github ./NvChad/.ignore ./NvChad/.gitignore  
+
+fi
+
 rm -rf $HOME/.config/nvim
 mkdir -p $HOME/.config/nvim/
-git clone https://github.com/NvChad/NvChad.git ~/.config/nvim/
+
+cp -r ./NvChad/. $HOME/.config/nvim
 mkdir -p $HOME/.config/nvim/lua/custom/
 stow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
+
+# test if neovim is in flatpak 
+if flatpak list | grep "test"; then
+  rm -rf $HOME/.var/app/io.neovim.nvim/config
+  mkdir -p $HOME/.var/app/io.neovim.nvim/config
+
+  cp -r ./NvChad/. $HOME/.var/app/io.neovim.nvim/config/
+  mkdir -p $HOME/.var/app/io.neovim.nvim/config/lua/custom/
+  stow --target=/home/$(whoami)/.var/app/io.neovim.nvim/config/lua/custom neovim_chad_custom
+fi
 
 rm -rf $HOME/.config/hypr
 mkdir -p $HOME/.config/hypr
