@@ -94,11 +94,12 @@
   },
 
   "clock": {
-      "format": "{: %H:%M   %A, %Y-%m-%d}",
+      "format": " {:%H:%M   %A, %Y-%m-%d}",
       "interval": 60,
       "tooltip": true,
       "tooltip-format": "{:%Y-%m-%d}",
-  }
+  },
+ 
 
   
 
