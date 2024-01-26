@@ -23,7 +23,7 @@ Last it will ask for a password. You know the password.
 
 start ssh agent and add all private files in ~/.shh/
 
-`eval "$(ssh-agent -s) && ssh-add ~/.ssh/!(*.*)`
+`eval "$(ssh-agent -s)" && ssh-add ~/.ssh/!(*.*)`
 
 [Last add the public key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
