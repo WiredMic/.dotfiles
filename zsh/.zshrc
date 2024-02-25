@@ -8,6 +8,7 @@
 
 
 source $ZDOTDIR/sweet_sentences.sh
+# gpg-connect-agent updatestartuptty /bye > /dev/null # help pgp find user tty for password prompts
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -19,19 +20,18 @@ source $ZDOTDIR/.zshenv
 source $ZDOTDIR/.zshalias
 source $ZDOTDIR/.zshkeybind
 
-HISTFILE=~/.cache/zsh/.histfile
+HISTFILE=$XDG_CACHE_HOME/zsh/histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
+autoload -U compinit && compinit
+
 setopt beep notify
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '$ZDOTDIR/.zshrc'
+
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
-
 
 
 # themes/plugins
