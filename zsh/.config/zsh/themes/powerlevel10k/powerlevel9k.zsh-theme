@@ -1,1 +1,0 @@
-../../../../../zsh/themes/powerlevel10k/powerlevel9k.zsh-theme

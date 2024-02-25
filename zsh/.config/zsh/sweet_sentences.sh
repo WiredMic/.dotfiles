@@ -1,1 +1,0 @@
-../../../zsh/sweet_sentences.sh

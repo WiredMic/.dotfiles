@@ -1,1 +1,0 @@
-../../../../../zsh/plugins/zsh-you-should-use/ISSUE_TEMPLATE.md

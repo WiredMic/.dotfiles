@@ -1,1 +1,0 @@
-../../../../../../zsh/themes/powerlevel10k/gitstatus/gitstatus.prompt.zsh
