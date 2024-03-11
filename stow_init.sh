@@ -8,8 +8,8 @@
 # by Rasmus Enevoldsen (2023)
 # -------------------------------------
 
-rm -rf $HOME/.config/git
-mkdir -p $HOME/.config/git
+rm -rf $XDG_CONFIG_HOME/git
+mkdir -p $XDG_CONFIG_HOME/git
 stow --target=/home/$(whoami)/.config/git git
 
 
@@ -25,11 +25,11 @@ if [ $? -eq 0 ]; then
 
 fi
 
-rm -rf $HOME/.config/nvim
-mkdir -p $HOME/.config/nvim/
+rm -rf $XDG_CONFIG_HOME/nvim
+mkdir -p $XDG_CONFIG_HOME/nvim/
 
-cp -r ./NvChad/. $HOME/.config/nvim
-mkdir -p $HOME/.config/nvim/lua/custom/
+cp -r ./NvChad/. $XDG_CONFIG_HOME/nvim
+mkdir -p $XDG_CONFIG_HOME/nvim/lua/custom/
 stow --target=/home/$(whoami)/.config/nvim/lua/custom neovim_chad_custom
 
 # test if neovim is in flatpak 
@@ -42,36 +42,49 @@ if flatpak list | grep "test"; then
   stow --target=/home/$(whoami)/.var/app/io.neovim.nvim/config/lua/data/nvim/ neovim_chad_custom
 fi
 
-rm -rf $HOME/.config/hypr
-mkdir -p $HOME/.config/hypr
+rm -rf $XDG_CONFIG_HOME/hypr
+mkdir -p $XDG_CONFIG_HOME/hypr
 stow --target=/home/$(whoami)/.config/hypr hypr
 
-rm -rf $HOME/.config/kitty
-mkdir -p $HOME/.config/kitty
+rm -rf $XDG_CONFIG_HOME/kitty
+mkdir -p $XDG_CONFIG_HOME/kitty
 stow --target=/home/$(whoami)/.config/kitty kitty
 
-rm -rf $HOME/.config/wal
-mkdir -p $HOME/.config/wal
+rm -rf $XDG_CONFIG_HOME/wal
+mkdir -p $XDG_CONFIG_HOME/wal
 stow --target=/home/$(whoami)/.config/wal wal
 
-rm -rf $HOME/.config/waybar
-mkdir -p $HOME/.config/waybar
+rm -rf $XDG_CONFIG_HOME/waybar
+mkdir -p $XDG_CONFIG_HOME/waybar
 stow --target=/home/$(whoami)/.config/waybar waybar
 
 rm -rf $HOME/.local/share/cows
 mkdir -p ~/.local/share/cows
 stow --target=/home/$(whoami)/.local/share/cows cowsay
 
-rm -rf $HOME/.config/distrobox
-mkdir -p $HOME/.config/distrobox
+rm -rf $XDG_CONFIG_HOME/distrobox
+mkdir -p $XDG_CONFIG_HOME/distrobox
 stow --target=/home/$(whoami)/.config/distrobox distrobox
 
 rm -rf $HOME/.zshenv 
 stow --target=/home/$(whoami) zsh_initfile
 
-rm -rf $HOME/.config/zsh
-mkdir -p ~/.config/zsh
+rm -rf $XDG_CONFIG_HOME/zsh
+mkdir -p $XDG_CONFIG_HOME/zsh
+mkdir -p $XDG_CACHE_HOME/zsh
+touch $XDG_CACHE_HOME/zsh/histfile
 stow --target=/home/$(whoami)/.config/zsh zsh
 echo "Type password to change shell to ZSH"
 chsh -s $(/bin/zsh)
+
+rm -rf $XDG_CONFIG_HOME/environment.d/
+mkdir -p $XDG_CONFIG_HOME/environment.d/
+stow --target=/home/$(whoami)/.config/environment.d systemd-env
+
+
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+# ~/.config/emacs/bin/doom install
+rm -rf $XDG_CONFIG_HOME/doom/
+mkdir -p $XDG_CONFIG_HOME/doom
+stow --target=/home/$(whoami)/.config/doom doom-emacs
 

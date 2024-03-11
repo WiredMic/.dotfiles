@@ -30,22 +30,26 @@ export TERM="kitty"
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 export COWPATH=$XDG_DATA_HOME/cows
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc 
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 # export WGETRC="XDG_CONFIG_HOME"/wget/wgetrc
 export KODI_DATA="$XDG_DATA_HOME/kodi"
-#
+export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
+
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 export DBX_CONTAINER_MANAGER="podman"
 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GTK_THEME=Dracula
 # qt
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="qt6ct"
 
 #PATH
 PATH="/home/$(whoami)/.local/share/cargo/bin:$PATH"
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons

@@ -11,5 +11,6 @@
 alias ls='exa --icons -a --group-directories-first' 
 alias vim=nvim
 alias rm='rm -I'
-alias cat='bat'
+alias cat='bat --style=plain,header'
+alias emacs='emacsclient -c -a "emacs"'
 # eval "$(zoxide init --cmd cd zsh)"

@@ -97,4 +97,29 @@ function IsWSL()
   return 0
 end
 
+M.papyrus = {
+  n = {
+    ["<localleader>pc"] = {
+        -- function ()
+        --   if vim.bo.filetype == "rust" then
+        --   vim.cmd("RustRun")
+        --   end
+        -- end,
+        "<cmd>PapyrusCompile<CR>",
+        "Compile the Markdown doc",
+    },
+    ["<localleader>pa"] = {
+        -- function ()
+        --   if vim.bo.filetype == "rust" then
+        --   vim.cmd("RustRun")
+        --   end
+        -- end,
+        "<cmd>PapyrusAutoCompile<CR>",
+        "Auto compile Markdown doc",
+    },
+
+  },
+
+}
+
 return M

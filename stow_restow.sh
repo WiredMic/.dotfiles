@@ -18,3 +18,4 @@ stow --verbose --restow --target=/home/$(whoami)/.local/share/cows cowsay
 stow --verbose --restow --target=/home/$(whoami)/.config/distrobox distrobox
 stow --verbose --restow --target=/home/$(whoami) zsh_initfile
 stow --verbose --restow --target=/home/$(whoami)/.config/zsh zsh
+stow --verbose --restow --target=/home/$(whoami)/.config/environment.d systemd-env

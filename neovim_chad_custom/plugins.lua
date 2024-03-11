@@ -7,6 +7,7 @@ local plugins = {
         "ltex-ls", -- https://github.com/valentjn/ltex-ls
         -- "texlab",
         "marksman",
+        "lua-language-server",
       },
     },
   },
@@ -79,6 +80,12 @@ local plugins = {
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
+  },
+  {
+    "abeleinin/papyrus",
+    opts = function ()
+      return require "custom.configs.papyrus"
+    end,
   },
 }
 
