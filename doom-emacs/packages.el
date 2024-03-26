@@ -49,8 +49,11 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-
-;; (package! evil-tutor)
-
-(unpin! org-roam)
+(package! org-modern)
 (package! org-roam-ui)
+(package! org-auto-tangle)
+(package! org-download)
+
+;;; org mode and pdf
+(package! pdf-tools)
+(package! org-noter)
