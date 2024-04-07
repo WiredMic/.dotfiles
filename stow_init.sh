@@ -58,6 +58,10 @@ rm -rf $XDG_CONFIG_HOME/waybar
 mkdir -p $XDG_CONFIG_HOME/waybar
 stow --target=/home/$(whoami)/.config/waybar waybar
 
+rm -rf $XDG_CONFIG_HOME/wlogout
+mkdir -p $XDG_CONFIG_HOME/wlogout
+stow --target=/home/$(whoami)/.config/wlogout wlogout
+
 rm -rf $HOME/.local/share/cows
 mkdir -p ~/.local/share/cows
 stow --target=/home/$(whoami)/.local/share/cows cowsay
